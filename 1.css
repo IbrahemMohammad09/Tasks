@@ -1,0 +1,95 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .hero {
+    height: 100vh;
+    width: 100%;
+    background: black;
+    background-size: cover;
+    background-position: center;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 5%;
+  }
+  
+  .logo {
+    color: beige;
+    font-size: 30px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-left: 0px;
+   
+  }
+  nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 5px;
+    margin-right: 60px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav ul li a:hover {
+    background-color: rgba(131, 126, 126, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+    transition: 0.4s;
+    color: aliceblue;
+  }
+  nav .btn {
+    margin-right: 70px;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  nav .btn:hover {
+    background-color:white;
+    color:red;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+  
+  h1 {
+    color: aliceblue;
+    margin-top: 150px;
+    margin-left: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  
+  h2 {
+    color: aliceblue;
+    margin-left: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  p {
+    color: aliceblue;
+    margin-left: 50px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  span {
+    color: red;
+    
+  }
+  .glyphicon {
+    margin-right: 8px;
+  
+  }
+  
