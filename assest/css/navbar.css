@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 nav {
   background-color: rgb(33, 33, 33);
   color: white;
   overflow: hidden;
-  padding: 10px 20px; 
+  padding: 10px 20px;
 }
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -27,12 +25,14 @@ nav {
   font-family: "Sedan SC", serif;
   font-weight: 400;
   font-style: normal;
+  margin-right: auto;
 }
-
 ul {
   list-style: none;
   display: flex;
   font-size: 20px;
+  justify-content: center;
+  flex: 1;
 }
 
 li {
@@ -44,7 +44,6 @@ a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
 
 .menu-icon {
   display: none;
@@ -59,6 +58,15 @@ nav ul li a:hover {
   color: #4cb0ea;
 }
 
+.color-toggle-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+  position: absolute;
+  right: 40px;
+  top: 18px;
+}
+
 @media (max-width: 768px) {
   ul {
     display: none;
@@ -69,16 +77,22 @@ nav ul li a:hover {
     top: 60px;
     left: 0;
     right: 0;
-    padding: 20px 0;
-    background-color:rgba(255, 255, 255, 0.5);
-    margin-top: 30px;
+    padding: 2cm 0;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
+  }
+  li {
+    padding: 12px 0;
   }
 
   a {
     color: #000000;
-   }
+  }
 
+  .color-toggle-btn {
+    display: block;
+    padding-right: 10px;
+  }
 
   #menu-toggle:checked + .menu-icon + ul {
     display: flex;
