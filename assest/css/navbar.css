@@ -7,7 +7,7 @@
 }
 
 nav {
-  background-color: rgb(33, 33, 33);
+  background-color: #070439;
   color: white;
   overflow: hidden;
   padding: 10px 20px;
@@ -55,16 +55,119 @@ nav ul li a:hover {
   border-radius: 20px;
   padding: 12px;
   transition: 0.4s;
-  color: #4cb0ea;
+  color: white;
 }
 
-.color-toggle-btn {
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
   font-size: 1.5rem;
   cursor: pointer;
   margin-left: auto;
   position: absolute;
   right: 40px;
   top: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
 }
 
 @media (max-width: 768px) {
@@ -78,20 +181,20 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     padding: 2cm 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
+    background-color: #070439;
+    z-index: 10;
+    color: white;
   }
   li {
     padding: 12px 0;
   }
 
   a {
-    color: #000000;
+    color: white;
   }
 
-  .color-toggle-btn {
-    display: block;
-    padding-right: 10px;
+  .switch {
+    margin-right: 15px;
   }
 
   #menu-toggle:checked + .menu-icon + ul {
