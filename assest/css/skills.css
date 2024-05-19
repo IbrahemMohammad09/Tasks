@@ -1,71 +1,108 @@
-.skills-container {
-    display: flex;
-    justify-content: space-around;
+h1{
+    text-align: center;
+}
+h3{
+    margin: 5px;
+}
+.skill
+{
+    width: 500px;
+    margin: 60px auto;
+   
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0,0, 0, 0.25),0 10px 10px rgba(0, 0, 0,0.22 );
+}
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+.bar
+{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0,0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0, 0, 0.12),0 1px 2px rgba(0, 0, 0,0.24 );
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover
+{
+    box-shadow: 0 14px 28px rgba(0,0, 0, 0.25),0 10px 10px rgba(0, 0, 0,0.22 );
+}
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135 deg,rgba(236,0, 140, 1)0%,rgba(252,103, 103, 1)100%);
+}
+.html
+{
+    width: 90%;
+    animation: html 3s ease;
 }
 
-.skill {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 15px;
-    position: relative;
-    background-color: #ddd;
-    background-image: conic-gradient(transparent 0%, transparent 100%);
+.css
+{
+    width: 70%;
+    animation: css 3s;
 }
 
-.skill span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+.javascript
+{
+    width: 45%;
+    animation: javascript 3s;
 }
 
-.skill::before {
-    content: attr(data-percentage) '%';
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+.react
+{
+    width: 90%;
+    animation: react 3s;
 }
 
-.html {
-    --skill-color: #e34c26;
-    animation: fill-html 2s ease-out forwards;
+@keyframes html{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width:90% ;
+    }
 }
 
-.css {
-    --skill-color: #1572B6;
-    animation: fill-css 2s ease-out forwards;
+
+@keyframes css{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width:70% ;
+    }
 }
 
-.js {
-    --skill-color: #F7DF1E;
-    animation: fill-js 2s ease-out forwards;
+
+@keyframes javascript{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width:45% ;
+    }
 }
 
-.react {
-    --skill-color: #61DBFB;
-    animation: fill-react 2s ease-out forwards;
-}
 
-@keyframes fill-html {
-    from { background-image: conic-gradient(transparent 0%, transparent 100%); }
-    to { background-image: conic-gradient(var(--skill-color) 0%, var(--skill-color) 90%, #ddd 0%, #ddd 100%); }
-}
-
-@keyframes fill-css {
-    from { background-image: conic-gradient(transparent 0%, transparent 100%); }
-    to { background-image: conic-gradient(var(--skill-color) 0%, var(--skill-color) 80%, #ddd 0%, #ddd 100%); }
-}
-
-@keyframes fill-js {
-    from { background-image: conic-gradient(transparent 0%, transparent 100%); }
-    to { background-image: conic-gradient(var(--skill-color) 0%, var(--skill-color) 75%, #ddd 0%, #ddd 100%); }
-}
-
-@keyframes fill-react {
-    from { background-image: conic-gradient(transparent 0%, transparent 100%); }
-    to { background-image: conic-gradient(var(--skill-color) 0%, var(--skill-color) 70%, #ddd 0%, #ddd 100%); }
+@keyframes react{
+    0%
+    {
+        width: 0%;
+    }
+    100%
+    {
+        width:60% ;
+    }
 }
