@@ -1,67 +1,285 @@
-h1 {
-    text-align: center;
+
+.my {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 60px;
+}
+
+.skills-area
+{
+  display:flex ;
+  flex-direction: column;
+  padding: 10px 40px
+}
+.skills
+{
+position: relative;
+margin-bottom: 25px;
+}
+
+.skill-title
+{
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.skill-bar
+{
+width: 40%;
+background: rgba(225,225,225,0.6);
+height:25px;
+z-index: -1;
+border-radius: 100px;
+position: absolute;
+}
+.skill-fill
+{
+  background: blue;
+  height: 25px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.skill-percent
+{
+  font-size: 20px;
+}
+.html
+{
+  animation: html 2s;
+  width: 50%;
+}
+.css
+{
+  animation: css 2s;
+  width: 60%;
+}
+.javascript
+{
+  animation: javascript 2s;
+  width: 90%;
+}
+.react
+{
+  animation: react 2s;
+  width: 20%;
+}
+
+
+@keyframes html{
+  from{
+width:0
   }
-  
-  h3 {
-    margin: 5px;
+  to
+  {
+width:50%;
   }
-  
-  .skill {
-    width: 500px;
-    margin: 60px auto;
-    padding: 20px;
-    box-shadow: 0 14px 28px rgba(0,0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+@keyframes css{
+  from{
+width:0
   }
-  
-  .skill li {
-    margin: 20px 0;
-    padding: 10px;
+  to
+  {
+width:60%;
   }
-  
-  .bar {
-    background: #353b48;
-    display: block;
-    height: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+@keyframes javascript{
+  from{
+width:0
   }
-  
-  .bar span {
-    display: block;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
-    width: 0; /* Start width - will be animated */
-    animation: growWidth 3s ease-out forwards;
+  to
+  {
+width:90%;
   }
-  
-  .bar:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+@keyframes react{
+  from{
+width:0
   }
-  
-  .html span { --target-width: 90%; animation-name: html; }
-  .css span { --target-width: 70%; animation-name: css; }
-  .javascript span { --target-width: 45%; animation-name: javascript; }
-  .react span { --target-width: 60%; animation-name: react; } /* Updated to 60% to match the keyframes */
-  
-  @keyframes html {
-    from { width: 0; }
-    to { width: var(--target-width); }
+  to
+  {
+width: 20%;
   }
-  
-  @keyframes css {
-    from { width: 0; }
-    to { width: var(--target-width); }
-  }
-  
-  @keyframes javascript {
-    from { width: 0; }
-    to { width: var(--target-width); }
-  }
-  
-  @keyframes react {
-    from { width: 0; }
-    to { width: var(--target-width); }
-  }
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر على جانبي الصفحة */
+}
+
+.skills-wrapper {
+  width: 50%; /* نصف العرض للمهارات */
+  padding: 0 5px; /* تباعد داخلي */
+}
+
+.other-content {
+  width: calc(50% - 10px); /* نصف العرض للعناصر الأخرى */
+  padding: 0 10px; /* تباعد داخلي */
+  display: flex; /* استخدام Flexbox */
+  align-items: center; /* محاذاة العناصر في المنتصف */
+}
+
+
+
+.radial-bars {
+  width: 100%; /* العرض الكامل للحاوية */
+  display: flex; /* استخدام Flexbox */
+  justify-content: space-around; /* توزيع الدوائر بالتساوي */
+  flex-wrap: wrap; /* السماح بالتفاف الدوائر لتشكيل صفوف */
+}
+.radial-bar {
+  width: 5px; /* تقريباً نصف العرض لكل دائرة مع بعض التباعد */
+  margin-bottom: 10px; /* هامش بين الدوائر */
+}
+
+
+    .radial-bars .radial-bar{
+        width: 200px;
+        height: 170px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .radial-bars .radial-bar svg{
+        position: absolute;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%) rotate(-90deg);
+        width:20px;
+        height: 20px;
+    
+    }
+    .radial-bars .radial-bar .progress-bar
+    {
+        stroke-width: 10;
+        stroke: black;
+        stroke-dasharray: 502;
+        stroke-dashoffset: 502;
+        stroke-linecap: round;
+        animation: animate-bar 1s linear forwards;
+    }
+    @keyframes animate-bar
+    {
+        100%
+        {
+            stroke-dashoffset: -1;
+        }
+    }
+    .path
+    {
+        stroke-width: 10;
+        stroke: aqua;
+        fill: transparent;
+        stroke-dasharray: 502;
+        stroke-dashoffset: 502;
+        stroke-linecap: round;
+    }
+    .path-1{animation: animate-path1 1s 1s linear forwards; }
+    .path-1{animation: animate-path1 1s 1s linear forwards; }
+    .path-1{animation: animate-path1 1s 1s linear forwards; }
+    .path-1{animation: animate-path1 1s 1s linear forwards; }
+    
+    @keyframes animate-path1
+    {
+        100%
+        {
+            stroke-dashoffset: 50;
+        }
+    }
+    
+    @keyframes animate-path1
+    {
+        100%
+        {
+            stroke-dashoffset: 175;
+        }
+    }
+    @keyframes animate-path1
+    {
+        100%
+        {
+            stroke-dashoffset: 125;
+        }
+    }
+    @keyframes animate-path1
+    {
+        100%
+        {
+            stroke-dashoffset: 75;
+        }
+    }
+    .radial-bar .percentage
+    {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        font-size: 17px;
+        font-weight: 500;
+        animation: showText 0.5s 1s linear forwards;
+    }
+    .progress-bar .text
+    {
+        width:100%;
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%);
+        font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+    }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 768px) {
+    .skill {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container, .container1 {
+        width: 90%; /* تقليل العرض للشاشات الصغيرة */
+        padding: 40px; /* تقليل البادينغ للشاشات الصغيرة */
+        height: auto; /* جعل الارتفاع تلقائي */
+    }
+
+    .sub-title {
+        font-size: 40px; /* تصغير حجم الخط للشاشات الصغيرة */
+    }
+
+    .sub-title span {
+        color: red;
+    }
+
+    .heading, .heading1 {
+        margin: 30px 0; /* تقليل الهامش للشاشات الصغيرة */
+    }
+
+    .radial-bars .radial-bar {
+        width: 100%; /* جعل الشرائط الدائرية تأخذ عرض الحاوية كاملًا */
+        height: auto; /* جعل الارتفاع تلقائي */
+        margin-bottom: 20px;
+    }
+
+    .radial-bars .radial-bar svg {
+        width: 100px; /* تصغير حجم الـ SVG */
+        height: 100px;
+    }
+}

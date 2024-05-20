@@ -1,0 +1,101 @@
+ <div class="container">
+    <h1 style="text-align: center">My Skills</h1>
+
+    <div class="skill">
+      
+      
+      <h3>HTML</h3>
+      
+      <div class="bar html"><span></span></div>
+      
+      <h3>CSS</h3>
+      
+      <div class="bar css"><span></span></div>
+      
+      <h3>JavaScript</h3>
+      
+      <div class="bar javascript"><span></span></div>
+      
+      <h3>React</h3>
+      
+      <div class="bar react"><span></span></div>
+    </div>
+    </div>
+
+    h1 {
+        text-align: center;
+      }
+      
+      h3 {
+        margin: 5px;
+      }
+      
+      .skill-container
+      {
+        align-items: center;
+      }
+      
+      .skill {
+        width: 500px;
+        margin: 60px 0; /* تعديل الهامش لتوسيط العناصر بشكل عمودي */
+        padding: 20px;
+        box-shadow: 0 14px 28px rgba(0,0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        align-items: center;
+      text-align: center;
+      }
+      .skill li {
+        margin: 20px 0;
+        padding: 10px;
+      }
+      
+      .bar {
+        background: #797f8b;
+        display: block;
+        height: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+      }
+      
+      .bar span {
+        display: block;
+        height: 100%;
+        background: linear-gradient(135deg, rgb(29, 44, 179) 0%, rgb(10, 55, 153) 100%);
+        width: 0; /* Start width - will be animated */
+        animation: growWidth 3s ease-out forwards;
+      }
+      
+      .bar:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      }
+      
+      .html span { --target-width: 90%; animation-name: html; }
+      .css span { --target-width: 70%; animation-name: css; }
+      .javascript span { --target-width: 45%; animation-name: javascript; }
+      .react span { --target-width: 60%; animation-name: react; } /* Updated to 60% to match the keyframes */
+      
+      @keyframes html {
+        from { width: 0; }
+        to { width: var(--target-width); }
+      }
+      
+      @keyframes css {
+        from { width: 0; }
+        to { width: var(--target-width); }
+      }
+      
+      @keyframes javascript {
+        from { width: 0; }
+        to { width: var(--target-width); }
+      }
+      
+      @keyframes react {
+        from { width: 0; }
+        to { width: var(--target-width); }
+      }
+      
+      
+      
+      
