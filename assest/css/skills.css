@@ -28,7 +28,7 @@
   position: absolute;
 }
 .skill-fill {
-  background: #23489f;
+  background: blue;
   height: 30px;
   border-radius: 100px;
   display: flex;
