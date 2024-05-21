@@ -1,40 +1,34 @@
-
 .my {
   text-align: center;
   margin-top: 40px;
   font-size: 60px;
 }
 
-.skills-area
-{
-  display:flex ;
+.skills-area {
+  display: flex;
   flex-direction: column;
   padding: 10px 40px;
   margin-top: 80px;
 }
-.skills
-{
-position: relative;
-margin-bottom: 25px;
+.skills {
+  position: relative;
+  margin-bottom: 25px;
 }
 
-.skill-title
-{
+.skill-title {
   font-size: 25px;
   margin-bottom: 10px;
 }
-.skill-bar
-{
-width: 40%;
-background: rgba(225,225,225,0.6);
-height:30px;
-z-index: -1;
-border-radius: 100px;
-position: absolute;
+.skill-bar {
+  width: 40%;
+  background: rgba(225, 225, 225, 0.6);
+  height: 30px;
+  z-index: -1;
+  border-radius: 100px;
+  position: absolute;
 }
-.skill-fill
-{
-  background: blue;
+.skill-fill {
+  background: #23489f;
   height: 30px;
   border-radius: 100px;
   display: flex;
@@ -44,71 +38,63 @@ position: absolute;
   overflow: hidden;
 }
 
-.skill-percent
-{
+.skill-percent {
   font-size: 20px;
   color: aliceblue;
 }
-.html
-{
+.html {
   animation: html 2s;
   width: 50%;
 }
-.css
-{
+.css {
   animation: css 2s;
   width: 60%;
 }
-.javascript
-{
+.javascript {
   animation: javascript 2s;
   width: 90%;
 }
-.react
-{
+.react {
   animation: react 2s;
   width: 20%;
 }
 
-
-@keyframes html{
-  from{
-width:0
+@keyframes html {
+  from {
+    width: 0;
   }
-  to
-  {
-width:50%;
+  to {
+    width: 50%;
   }
 }
-@keyframes css{
-  from{
-width:0
+@keyframes css {
+  from {
+    width: 0;
   }
-  to
-  {
-width:60%;
+  to {
+    width: 60%;
   }
 }
 
-@keyframes javascript{
-  from{
-width:0
+@keyframes javascript {
+  from {
+    width: 0;
   }
-  to
-  {
-width:90%;
+  to {
+    width: 90%;
   }
 }
-@keyframes react{
-  from{
-width:0
+@keyframes react {
+  from {
+    width: 0;
   }
-  to
-  {
-width: 20%;
+  to {
+    width: 20%;
   }
 }
 
+/*
+  نهاية المهارات التقنية و بداية المهارات الشخصية */
 .content-wrapper {
   display: flex;
   justify-content: space-between; /* توزيع العناصر على جانبي الصفحة */
@@ -126,15 +112,12 @@ width: 20%;
   align-items: center; /* محاذاة العناصر في المنتصف */
 }
 
-
-
-.heading,.heading2
-{
+.heading,
+.heading2 {
   text-align: center;
   margin-top: 40px;
 }
-.heading2
-{
+.heading2 {
   text-align: center;
 }
 
@@ -142,7 +125,7 @@ width: 20%;
   width: 100%; /* العرض الكامل للحاوية */
   display: flex; /* استخدام Flexbox */
   flex-wrap: wrap; /* السماح بالتفاف الدوائر لتشكيل صفوف */
-  justify-content: space-around; /* توزيع الدوائر بالتساوي */
+  justify-content: space-evenly; /* space-around توزيع الدوائر بالتساوي */
   margin-top: 80px;
 }
 .radial-bar {
@@ -150,150 +133,112 @@ width: 20%;
   margin-bottom: 10px; /* هامش بين الدوائر */
 }
 
+.radial-bars .radial-bar {
+  width: 200px;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 150px;
+  height: 150px;
+}
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: black;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+.path {
+  stroke-width: 10;
+  stroke: #23489f;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.path1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+.path2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+.path3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+.path4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+.path5 {
+  animation: animate-path5 1s 1s linear forwards;
+}
+.path6 {
+  animation: animate-path6 1s 1s linear forwards;
+}
 
-    .radial-bars .radial-bar{
-        width: 200px;
-        height: 170px;
-        margin-bottom: 10px;
-        position: relative;
-    }
-    .radial-bars .radial-bar svg{
-        position: absolute;
-        top: 50%;
-        left:50%;
-        transform: translate(-50%,-50%) rotate(-90deg);
-        width:150px;
-        height: 150px;
-    
-    }
-    .radial-bars .radial-bar .progress-bar
-    {
-        stroke-width: 10;
-        stroke: black;
-        stroke-dasharray: 502;
-        stroke-dashoffset: 502;
-        stroke-linecap: round;
-        animation: animate-bar 1s linear forwards;
-    }
-    @keyframes animate-bar
-    {
-        100%
-        {
-            stroke-dashoffset: -1;
-        }
-    }
-    .path
-    {
-        stroke-width: 10;
-        stroke: aqua;
-        fill: transparent;
-        stroke-dasharray: 502;
-        stroke-dashoffset: 502;
-        stroke-linecap: round;
-    }
-    .path-1{animation: animate-path1 1s 1s linear forwards; }
-    .path-1{animation: animate-path1 1s 1s linear forwards; }
-    .path-1{animation: animate-path1 1s 1s linear forwards; }
-    .path-1{animation: animate-path1 1s 1s linear forwards; }
-    
-    @keyframes animate-path1
-    {
-        100%
-        {
-            stroke-dashoffset: 50;
-        }
-    }
-    
-    @keyframes animate-path1
-    {
-        100%
-        {
-            stroke-dashoffset: 175;
-        }
-    }
-    @keyframes animate-path1
-    {
-        100%
-        {
-            stroke-dashoffset: 125;
-        }
-    }
-    @keyframes animate-path1
-    {
-        100%
-        {
-            stroke-dashoffset: 75;
-        }
-    }
-    .radial-bar .percentage
-    {
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        font-size: 17px;
-        font-weight: 500;
-        animation: showText 0.5s 1s linear forwards;
-        color:aliceblue
-    }
-    .progress-bar .text
-    {
-        width:100%;
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        bottom: -5px;
-        transform: translateX(-50%);
-        font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-    }
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
 
-   
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 75;
+  }
+}
+@keyframes animate-path5 {
+  100% {
+    stroke-dashoffset: 75;
+  }
+}
 
+@keyframes animate-path6 {
+  100% {
+    stroke-dashoffset: 75;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-    @media only screen and (max-width: 768px) {
-    .skill {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container, .container1 {
-        width: 90%; /* تقليل العرض للشاشات الصغيرة */
-        padding: 40px; /* تقليل البادينغ للشاشات الصغيرة */
-        height: auto; /* جعل الارتفاع تلقائي */
-    }
-
-    .sub-title {
-        font-size: 40px; /* تصغير حجم الخط للشاشات الصغيرة */
-    }
-
-    .sub-title span {
-        color: red;
-    }
-
-    .heading, .heading1 {
-        margin: 30px 0; /* تقليل الهامش للشاشات الصغيرة */
-    }
-
-    .radial-bars .radial-bar {
-        width: 100%; /* جعل الشرائط الدائرية تأخذ عرض الحاوية كاملًا */
-        height: auto; /* جعل الارتفاع تلقائي */
-        margin-bottom: 20px;
-    }
-
-    .radial-bars .radial-bar svg {
-        width: 100px; /* تصغير حجم الـ SVG */
-        height: 100px;
-    }
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  color: aliceblue;
+}
+.progress-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
 }
