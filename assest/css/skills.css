@@ -2,6 +2,7 @@
   text-align: center;
   margin-top: 40px;
   font-size: 60px;
+  color: white;
 }
 
 .skills-area {
@@ -18,6 +19,7 @@
 .skill-title {
   font-size: 25px;
   margin-bottom: 10px;
+  color: white;
 }
 .skill-bar {
   width: 40%;
@@ -28,7 +30,7 @@
   position: absolute;
 }
 .skill-fill {
-  background: blue;
+  background:  #23489f;
   height: 30px;
   border-radius: 100px;
   display: flex;
@@ -98,7 +100,10 @@
 .content-wrapper {
   display: flex;
   justify-content: space-between; /* توزيع العناصر على جانبي الصفحة */
+
+ 
 }
+
 
 .skills-wrapper {
   width: 50%; /* نصف العرض للمهارات */
@@ -116,6 +121,7 @@
 .heading2{
   text-align: center;
   margin-top: 40px;
+  color: white;
 
 
 }
@@ -192,13 +198,13 @@
 
 @keyframes animate-path1 {
   100% {
-    stroke-dashoffset: 90;
+    stroke-dashoffset: 95;
   }
 }
 
 @keyframes animate-path2 {
   100% {
-    stroke-dashoffset: 65;
+    stroke-dashoffset: 90;
   }
 }
 @keyframes animate-path3 {
@@ -208,12 +214,12 @@
 }
 @keyframes animate-path4 {
   100% {
-    stroke-dashoffset: 95;
+    stroke-dashoffset: 90;
   }
 }
 @keyframes animate-path5 {
   100% {
-    stroke-dashoffset: 90;
+    stroke-dashoffset: 65;
   }
 }
 
@@ -233,6 +239,10 @@
   animation: showText 0.5s 1s linear forwards;
   color: aliceblue;
 }
+.text
+{
+  color: white;
+}
 .progress-bar .text {
   width: 100%;
   position: absolute;
@@ -244,4 +254,5 @@
   font-weight: 500;
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
+  color: white;
 }
