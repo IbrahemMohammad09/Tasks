@@ -44,15 +44,15 @@
 }
 .html {
   animation: html 2s;
-  width: 50%;
+  width: 95%;
 }
 .css {
   animation: css 2s;
-  width: 60%;
+  width: 80%;
 }
 .javascript {
   animation: javascript 2s;
-  width: 90%;
+  width: 50%;
 }
 .react {
   animation: react 2s;
@@ -64,7 +64,7 @@
     width: 0;
   }
   to {
-    width: 50%;
+    width: 95%;
   }
 }
 @keyframes css {
@@ -72,7 +72,7 @@
     width: 0;
   }
   to {
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -81,7 +81,7 @@
     width: 0;
   }
   to {
-    width: 90%;
+    width: 50%;
   }
 }
 @keyframes react {
@@ -113,13 +113,16 @@
 }
 
 .heading,
-.heading2 {
+.heading2{
   text-align: center;
   margin-top: 40px;
+
+
 }
 .heading2 {
   text-align: center;
 }
+
 
 .radial-bars {
   width: 100%; /* العرض الكامل للحاوية */
@@ -189,34 +192,34 @@
 
 @keyframes animate-path1 {
   100% {
-    stroke-dashoffset: 50;
+    stroke-dashoffset: 90;
   }
 }
 
 @keyframes animate-path2 {
   100% {
-    stroke-dashoffset: 175;
+    stroke-dashoffset: 65;
   }
 }
 @keyframes animate-path3 {
   100% {
-    stroke-dashoffset: 125;
+    stroke-dashoffset:110;
   }
 }
 @keyframes animate-path4 {
   100% {
-    stroke-dashoffset: 75;
+    stroke-dashoffset: 95;
   }
 }
 @keyframes animate-path5 {
   100% {
-    stroke-dashoffset: 75;
+    stroke-dashoffset: 90;
   }
 }
 
 @keyframes animate-path6 {
   100% {
-    stroke-dashoffset: 75;
+    stroke-dashoffset: 95;
   }
 }
 
