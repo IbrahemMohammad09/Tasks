@@ -259,31 +259,30 @@
   }
 
   .content-wrapper {
-    flex-direction: column; /* تغيير التوجه إلى عمودي */
+    flex-direction: column; 
   }
-
   .skills-wrapper,
   .other-content {
-    width: 100%; /* تعيين العرض إلى 100% لكل من الأقسام */
-    padding: 0; /* إزالة التباعد الداخلي */
-    margin-top: 20px; /* إضافة هامش علوي */
+    width: 100%; 
+    padding: 0; 
+    margin-top: 20px; 
   }
 
   .radial-bars {
-    justify-content: center; /* محاذاة الدوائر في المنتصف */
+    justify-content: center; 
   }
 
   .radial-bar {
-    width: 45%; /* تعيين العرض لتناسب دائرتين في صف واحد */
-    margin-bottom: 20px; /* زيادة الهامش السفلي */
+    width: 45%; 
+    margin-bottom: 20px; 
   }
 
   .radial-bars .radial-bar svg {
-    width: 100px; /* تصغير حجم الSVG */
+    width: 100px;
     height: 100px;
   }
 
-  /* تصغير حجم النصوص */
+  
   .skill-title,
   .skill-percent,
   .heading,
@@ -291,5 +290,5 @@
     font-size: 25px;
   }
 
-  /* تعديلات أخرى حسب الحاجة */
+  
 }
