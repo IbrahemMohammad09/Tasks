@@ -30,7 +30,7 @@
   position: absolute;
 }
 .skill-fill {
-  background:  #23489f;
+  background: #23489f;
   height: 30px;
   border-radius: 100px;
   display: flex;
@@ -95,51 +95,42 @@
   }
 }
 
-/*
-  نهاية المهارات التقنية و بداية المهارات الشخصية */
 .content-wrapper {
   display: flex;
-  justify-content: space-between; /* توزيع العناصر على جانبي الصفحة */
-
- 
+  justify-content: space-between;
 }
-
-
 .skills-wrapper {
-  width: 50%; /* نصف العرض للمهارات */
-  padding: 0 5px; /* تباعد داخلي */
+  width: 50%;
+  padding: 0 5px;
 }
 .other-content {
-  width: calc(50% - 10px); /* نصف العرض للعناصر الأخرى */
-  padding: 0 10px; /* تباعد داخلي */
-  display: flex; /* استخدام Flexbox */
-  flex-direction: column; /* ترتيب العناصر بشكل عمودي */
-  align-items: center; /* محاذاة العناصر في المنتصف */
+  width: calc(50% - 10px);
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .heading,
-.heading2{
+.heading2 {
   text-align: center;
   margin-top: 40px;
   color: white;
-
-
 }
 .heading2 {
   text-align: center;
 }
 
-
 .radial-bars {
-  width: 100%; /* العرض الكامل للحاوية */
-  display: flex; /* استخدام Flexbox */
-  flex-wrap: wrap; /* السماح بالتفاف الدوائر لتشكيل صفوف */
-  justify-content: space-evenly; /* space-around توزيع الدوائر بالتساوي */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin-top: 80px;
 }
 .radial-bar {
-  width: calc(50% - 10px); /* نصف العرض لكل دائرة مع بعض التباعد */
-  margin-bottom: 10px; /* هامش بين الدوائر */
+  width: calc(50% - 10px);
+  margin-bottom: 10px;
 }
 
 .radial-bars .radial-bar {
@@ -209,7 +200,7 @@
 }
 @keyframes animate-path3 {
   100% {
-    stroke-dashoffset:110;
+    stroke-dashoffset: 110;
   }
 }
 @keyframes animate-path4 {
@@ -239,8 +230,7 @@
   animation: showText 0.5s 1s linear forwards;
   color: aliceblue;
 }
-.text
-{
+.text {
   color: white;
 }
 .progress-bar .text {
@@ -255,4 +245,51 @@
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
   color: white;
+}
+
+
+@media (max-width: 768px) {
+  .radial-bar .percentage {
+    font-size: 14px;
+  }
+
+  .progress-bar .text {
+    font-size: 20px;
+    bottom: -10px; 
+  }
+
+  .content-wrapper {
+    flex-direction: column; /* تغيير التوجه إلى عمودي */
+  }
+
+  .skills-wrapper,
+  .other-content {
+    width: 100%; /* تعيين العرض إلى 100% لكل من الأقسام */
+    padding: 0; /* إزالة التباعد الداخلي */
+    margin-top: 20px; /* إضافة هامش علوي */
+  }
+
+  .radial-bars {
+    justify-content: center; /* محاذاة الدوائر في المنتصف */
+  }
+
+  .radial-bar {
+    width: 45%; /* تعيين العرض لتناسب دائرتين في صف واحد */
+    margin-bottom: 20px; /* زيادة الهامش السفلي */
+  }
+
+  .radial-bars .radial-bar svg {
+    width: 100px; /* تصغير حجم الSVG */
+    height: 100px;
+  }
+
+  /* تصغير حجم النصوص */
+  .skill-title,
+  .skill-percent,
+  .heading,
+  .heading2 {
+    font-size: 25px;
+  }
+
+  /* تعديلات أخرى حسب الحاجة */
 }
