@@ -1,108 +1,294 @@
-h1{
-    text-align: center;
-}
-h3{
-    margin: 5px;
-}
-.skill
-{
-    width: 500px;
-    margin: 60px auto;
-   
-    padding: 20px;
-    box-shadow: 0 14px 28px rgba(0,0, 0, 0.25),0 10px 10px rgba(0, 0, 0,0.22 );
-}
-.skill li{
-    margin: 20px 0;
-    padding: 10px;
-}
-.bar
-{
-    background: #353b48;
-    display: block;
-    height: 20px;
-    border: 1px solid rgba(0, 0,0, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0, 0, 0.12),0 1px 2px rgba(0, 0, 0,0.24 );
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-.bar:hover
-{
-    box-shadow: 0 14px 28px rgba(0,0, 0, 0.25),0 10px 10px rgba(0, 0, 0,0.22 );
-}
-.bar span{
-    height: 20px;
-    float: left;
-    background: linear-gradient(135 deg,rgba(236,0, 140, 1)0%,rgba(252,103, 103, 1)100%);
-}
-.html
-{
-    width: 90%;
-    animation: html 3s ease;
+.my {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 60px;
+  color: white;
 }
 
-.css
-{
-    width: 70%;
-    animation: css 3s;
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+  margin-top: 80px;
+}
+.skills {
+  position: relative;
+  margin-bottom: 25px;
 }
 
-.javascript
-{
-    width: 45%;
-    animation: javascript 3s;
+.skill-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: white;
+}
+.skill-bar {
+  width: 40%;
+  background: rgba(225, 225, 225, 0.6);
+  height: 30px;
+  z-index: -1;
+  border-radius: 100px;
+  position: absolute;
+}
+.skill-fill {
+  background: #23489f;
+  height: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
 }
 
-.react
-{
-    width: 90%;
-    animation: react 3s;
+.skill-percent {
+  font-size: 20px;
+  color: aliceblue;
+}
+.html {
+  animation: html 2s;
+  width: 95%;
+}
+.css {
+  animation: css 2s;
+  width: 80%;
+}
+.javascript {
+  animation: javascript 2s;
+  width: 50%;
+}
+.react {
+  animation: react 2s;
+  width: 20%;
 }
 
-@keyframes html{
-    0%
-    {
-        width: 0%;
-    }
-    100%
-    {
-        width:90% ;
-    }
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes javascript {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes react {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20%;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.skills-wrapper {
+  width: 50%;
+  padding: 0 5px;
+}
+.other-content {
+  width: calc(50% - 10px);
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading,
+.heading2 {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+.heading2 {
+  text-align: center;
+}
+
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 80px;
+}
+.radial-bar {
+  width: calc(50% - 10px);
+  margin-bottom: 10px;
+}
+
+.radial-bars .radial-bar {
+  width: 200px;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 150px;
+  height: 150px;
+}
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stroke: black;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+.path {
+  stroke-width: 10;
+  stroke: #23489f;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.path1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+.path2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+.path3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+.path4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+.path5 {
+  animation: animate-path5 1s 1s linear forwards;
+}
+.path6 {
+  animation: animate-path6 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 95;
+  }
+}
+
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 90;
+  }
+}
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 110;
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 90;
+  }
+}
+@keyframes animate-path5 {
+  100% {
+    stroke-dashoffset: 65;
+  }
+}
+
+@keyframes animate-path6 {
+  100% {
+    stroke-dashoffset: 95;
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  color: aliceblue;
+}
+.text {
+  color: white;
+}
+.progress-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+  color: white;
 }
 
 
-@keyframes css{
-    0%
-    {
-        width: 0%;
-    }
-    100%
-    {
-        width:70% ;
-    }
-}
+@media (max-width: 768px) {
+  .radial-bar .percentage {
+    font-size: 14px;
+  }
 
+  .progress-bar .text {
+    font-size: 20px;
+    bottom: -10px; 
+  }
 
-@keyframes javascript{
-    0%
-    {
-        width: 0%;
-    }
-    100%
-    {
-        width:45% ;
-    }
-}
+  .content-wrapper {
+    flex-direction: column; 
+  }
+  .skills-wrapper,
+  .other-content {
+    width: 100%; 
+    padding: 0; 
+    margin-top: 20px; 
+  }
 
+  .radial-bars {
+    justify-content: center; 
+  }
 
-@keyframes react{
-    0%
-    {
-        width: 0%;
-    }
-    100%
-    {
-        width:60% ;
-    }
+  .radial-bar {
+    width: 45%; 
+    margin-bottom: 20px; 
+  }
+
+  .radial-bars .radial-bar svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  
+  .skill-title,
+  .skill-percent,
+  .heading,
+  .heading2 {
+    font-size: 25px;
+  }
+
+  
 }
